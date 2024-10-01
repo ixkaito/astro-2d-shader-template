@@ -1,0 +1,15 @@
+---
+export interface Props {
+  href: string;
+  className?: string;
+  activeClassName?: string;
+}
+
+const { href, className, activeClassName } = Astro.props;
+
+const isActive = href === Astro.url.pathname;
+---
+
+<a href={href} class:list={[className, isActive && activeClassName]}>
+  <slot />
+</a>

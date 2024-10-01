@@ -1,0 +1,35 @@
+---
+import ActiveLink from './ActiveLink.astro';
+---
+
+<header class="flex justify-between">
+  <p class="p-4 font-bold">Hello</p>
+  <nav>
+    <ul class="flex">
+      {
+        [
+          {
+            label: 'Home',
+            href: '/',
+          },
+          {
+            label: 'About',
+            href: '/about/',
+          },
+        ].map(({ label, href }) => {
+          return (
+            <li>
+              <ActiveLink
+                className="block p-4"
+                activeClassName="underline"
+                href={href}
+              >
+                {label}
+              </ActiveLink>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+</header>
