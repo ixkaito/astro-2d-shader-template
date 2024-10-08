@@ -20,6 +20,15 @@ importers:
       astro-relative-links:
         specifier: ^0.4.0
         version: 0.4.0(astro@4.15.10(rollup@4.23.0)(typescript@5.6.2))
+      gsap:
+        specifier: ^3.12.5
+        version: 3.12.5
+      lil-gui:
+        specifier: ^0.19.2
+        version: 0.19.2
+      ogl:
+        specifier: ^1.0.8
+        version: 1.0.8
       tailwindcss:
         specifier: ^3.4.9
         version: 3.4.13
@@ -1289,6 +1298,9 @@ packages:
     resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}
     engines: {node: '>=6.0'}
 
+  gsap@3.12.5:
+    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
+
   has-flag@3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
     engines: {node: '>=4'}
@@ -1487,6 +1499,9 @@ packages:
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
+
+  lil-gui@0.19.2:
+    resolution: {integrity: sha512-nU8j4ND702ouGfQZoaTN4dfXxacvGOAVK0DtmZBVcUYUAeYQXLQAjAN50igMHiba3T5jZyKEjXZU+Ntm1Qs6ZQ==}
 
   lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
@@ -1731,6 +1746,9 @@ packages:
   object-hash@3.0.0:
     resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
     engines: {node: '>= 6'}
+
+  ogl@1.0.8:
+    resolution: {integrity: sha512-3LOqryx4qtWuQQT9QQL8yjGBNdqlonJeOwNY4+TwkrQhENYKegKt9pdWba3LzPSlGUWFTfeUDQoL9tSHMtKq3Q==}
 
   onetime@7.0.0:
     resolution: {integrity: sha512-VXJjc87FScF88uafS3JllDgvAm+c/Slfz06lorj2uAY34rlUu0Nt+v8wreiImcrgAjjIHp1rXpTDlLOGw29WwQ==}
@@ -3854,6 +3872,8 @@ snapshots:
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
 
+  gsap@3.12.5: {}
+
   has-flag@3.0.0: {}
 
   has-flag@4.0.0: {}
@@ -4060,6 +4080,8 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
       type-check: 0.4.0
+
+  lil-gui@0.19.2: {}
 
   lilconfig@2.1.0: {}
 
@@ -4471,6 +4493,8 @@ snapshots:
   object-assign@4.1.1: {}
 
   object-hash@3.0.0: {}
+
+  ogl@1.0.8: {}
 
   onetime@7.0.0:
     dependencies:
