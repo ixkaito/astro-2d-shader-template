@@ -27,6 +27,8 @@
     "eslint": "^9.9.0",
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-tailwindcss": "^3.17.4",
+    "glsl-noise": "^0.0.0",
+    "glslify": "^7.1.1",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
   }
