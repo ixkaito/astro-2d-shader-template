@@ -1,7 +1,7 @@
-# Astro Static Site Starter Kit: kiteretz/sss
+# Astro template builder to quickly generate 2D shaders in the browser.
 
 ```
-npm create astro@latest -- --template kiteretz/sss
+npm create astro@latest -- --template ixkaito/astro-2d-shader-template
 ```
 
 ## 🚀 Project Structure
