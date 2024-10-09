@@ -5,9 +5,9 @@ import fragment from '../glsl/main.frag?raw';
 // import LoaderManager from '@/js/managers/LoaderManager'
 
 class Scene {
-  #renderer!: Renderer;
-  #mesh!: Mesh;
-  #program!: Program;
+  #renderer?: Renderer;
+  #mesh?: Mesh;
+  #program?: Program;
   #guiObj = {
     offset: 1,
   };
@@ -22,7 +22,9 @@ class Scene {
     const gui = new GUI();
 
     const handleChange = (value: number) => {
-      this.#program.uniforms.uOffset.value = value;
+      if (this.#program) {
+        this.#program.uniforms.uOffset.value = value;
+      }
     };
 
     gui.add(this.#guiObj, 'offset', 0.5, 4).onChange(handleChange);
@@ -32,7 +34,7 @@ class Scene {
     const canvasEl = document.querySelector('.scene');
 
     if (!(canvasEl instanceof HTMLCanvasElement)) {
-      return;
+      throw new Error("Couldn't find canvas element");
     }
 
     this.#renderer = new Renderer({
@@ -96,10 +98,14 @@ class Scene {
   handleRAF = (t: number) => {
     requestAnimationFrame(this.handleRAF);
 
-    this.#program.uniforms.uTime.value = t * 0.001;
+    if (this.#program) {
+      this.#program.uniforms.uTime.value = t * 0.001;
+    }
 
     // Don't need a camera if camera uniforms aren't required
-    this.#renderer.render({ scene: this.#mesh });
+    if (this.#mesh) {
+      this.#renderer?.render({ scene: this.#mesh });
+    }
   };
 }
 
