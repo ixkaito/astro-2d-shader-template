@@ -4,4 +4,12 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Home">
   <h1 class="text-2xl font-bold">Home page</h1>
+  <canvas class="scene fixed inset-0 -z-10"></canvas>
 </Layout>
+<script>
+  import Scene from '../js/modules/scene';
+
+  (() => {
+    new Scene();
+  })();
+</script>
